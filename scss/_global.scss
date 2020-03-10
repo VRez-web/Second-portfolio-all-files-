@@ -1,0 +1,205 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-bg;
+    overflow: hidden;
+    text-rendering: optimizeLegibility;
+    user-select: none;
+    font-smooth: antialiased;
+    color: $color-font;
+    font-family: $font-main;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+.section {
+    background-color: $color-bg;
+    padding-left: 30px;
+    padding-top: 30px;
+
+    &-title {
+
+        margin-bottom: 15px;
+        font-size: 38px;
+
+        &::before {
+
+            content: "<h1>";
+            margin-right: 10px;
+            font-size: 16px;
+            font-style: italic;
+            color: $color-tag;
+            letter-spacing: 1px;
+        }
+
+        &::after {
+
+            content: "</h1>";
+            margin-left: 10px;
+            font-size: 16px;
+            font-style: italic;
+            color: $color-tag;
+            letter-spacing: 1px;
+        }
+
+    }
+
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &__title {
+        letter-spacing: 3px;
+        font-size: 75px;
+        position: relative;
+        padding: 10px;
+        margin-bottom: 15px;
+
+        &::before {
+            content: "VR-web";
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: -5px;
+            text-shadow: -2px 0 red;
+            animation: glitch-before 3s linear 0s infinite alternate;
+            padding: 10px;
+        }
+
+        &::after {
+            content: "VR-web";
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: -3px;
+            text-shadow: -2px 0 blue;
+            animation: glitch-after 3s linear 0s infinite alternate;
+            padding: 10px;
+        }
+    }
+
+    &__bar {
+        width: 180px;
+        height: 10px;
+        background-color: #fff;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .fill {
+        width: 0%;
+        height: 100%;
+        background-color: #08fdd8;
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-animation: progress 3s ease-in-out forwards;
+        animation: progress 3s ease-in-out forwards;
+        border-radius: 15px;
+    }
+}
+
+.main {
+    opacity: 0;
+    display: none;
+}
+
+.inner-common {
+    height: 95%;
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    position: relative;
+
+    &::after {
+        content: "<body>";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-style: italic;
+        color: $color-tag;
+        letter-spacing: 1px;
+
+    }
+
+    &::before {
+        content: "</body>";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-style: italic;
+        color: $color-tag;
+        letter-spacing: 1px;
+    }
+}
+
+.color-word {
+    color: $color-tematicWord;
+}
+
+.burger {
+    display: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 9px 2px;
+    margin-right: 10px;
+    outline-color: #08fdd8;
+
+
+    &__item {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        font-size: 0;
+        color: transparent;
+        position: relative;
+
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            background-color: #fff;
+            bottom: -8px;
+
+
+        }
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            background-color: #fff;
+            top: -8px;
+
+
+        }
+
+
+    }
+
+
+}

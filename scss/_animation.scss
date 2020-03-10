@@ -1,0 +1,77 @@
+@keyframes glitch-before {
+    $steps: 20;
+
+    @for $i from 0 to $steps {
+        #{percentage($i*(1/$steps))} {
+            clip: rect(random(150)+px, 350px, random(150)+px, 30px)
+        }
+    }
+}
+
+@keyframes glitch-after {
+    $steps: 20;
+
+    @for $i from 0 to $steps {
+        #{percentage($i*(1/$steps))} {
+            clip: rect(random(150)+px, 350px, random(150)+px, 30px)
+        }
+    }
+}
+
+@keyframes progress {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes arrow-move {
+    from {
+        transform: translateX(5px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes modalSpawn {
+    0% {
+        top: -50%;
+    }
+
+    60% {
+        top: 55%;
+    }
+
+    80% {
+        top: 45%;
+    }
+
+    100% {
+        top: 50%;
+    }
+
+}
+
+@keyframes thinking {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes menuMove{
+    0%{
+        right: 100%;
+    }
+    100%{
+        right: 0;
+    }
+}
