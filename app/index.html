@@ -201,8 +201,8 @@
                             </div>
                             <div class="skills__about-card-content">
                                 <h2 class="skills__about-card-content-title">Html/Css</h2>
-                                <div class="skills__about-card-content-description">Валидность, кроссбраузерность,
-                                    адаптивность. Препроцессор SAAS/SCSS. Flex, grid, keyframes.</div>
+                                <div class="skills__about-card-content-description">Валидность, семантика,
+                                    адаптивность. Препроцессор SAAS/SCSS. Flex, grid, CSS-Анимации, SVG-спрайты.Bootstrap, немного Materiliaze</div>
                             </div>
                         </div>
                         <div class="skills__about-card">
@@ -217,7 +217,7 @@
                             </div>
                             <div class="skills__about-card-content">
                                 <h2 class="skills__about-card-content-title">Js/jquery</h2>
-                                <div class="skills__about-card-content-description">Чистый js, jquery, плагины с
+                                <div class="skills__about-card-content-description">Нативный js(es6),API, jquery, плагины с
                                     которыми работал: slick-slider, AOS.js, pagepiling.js.</div>
                             </div>
                         </div>
@@ -232,9 +232,10 @@
                                 </h2>
                             </div>
                             <div class="skills__about-card-content">
-                                <h2 class="skills__about-card-content-title">Gulp</h2>
-                                <div class="skills__about-card-content-description">Работа с: saas, autoprefixer,
-                                    imagemin, rename, concat, uglify, browser-sync.</div>
+                                <h2 class="skills__about-card-content-title">Сборщики</h2>
+                                <div class="skills__about-card-content-description">Gulp, работал с: saas, autoprefixer,
+                                    imagemin, rename, concat, uglify, browser-sync.
+                                Webpack, работал с:sass-loader,babel,optimize-css,copy-webpack,и тд.</div>
                             </div>
                         </div>
                         <div class="skills__about-card">
@@ -263,6 +264,7 @@
                             <ul>
                                 <li>VS code</li>
                                 <li>Avocode </li>
+                                <li>Figma </li>
                             </ul>
                         </div>
 
@@ -338,7 +340,7 @@
                             <div class="portfolio__card-content-inner">
                                 <h2 class="portfolio__card-content-title">Woman startUp</h2>
                                 <div class="portfolio__card-content-description">
-                                    Адаптивность, flex, препроцессор SCSS, БЭМ, js, jquery, AOS.js, keyframes.
+                                    Адаптивность, flex, препроцессор SCSS, БЭМ, js, jquery, AOS.js, CSS-Анимации.
                                 </div>
                             </div>
                             <div class="portfolio__card-content-link">
@@ -361,7 +363,23 @@
                             <div class="portfolio__card-content-link">
                                 <a href="https://avm-new-stone.ru/" target="_blank">Сайт<i
                                         class="fas fa-angle-double-right"></i></a>
-                                <a href="" target="_blank">Код<i class="fas fa-angle-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio__card">
+                        <img src="./img/YetiFilms.png" alt="Работа из портфолио">
+                        <div class="portfolio__card-content">
+                            <div class="portfolio__card-content-inner">
+                                <h2 class="portfolio__card-content-title">YetiFilms</h2>
+                                <div class="portfolio__card-content-description">
+                                    Адаптивность,bootstrap,нативный Js, работа с API, построение динамического контента,
+                                    Webpack
+                                </div>
+                            </div>
+                            <div class="portfolio__card-content-link">
+                                <a href="http://vr-web.darkhost.pro/YetiFilms/" target="_blank">Сайт<i
+                                        class="fas fa-angle-double-right"></i></a>
+                                <a href="https://github.com/VRez-web/YetiFilms" target="_blank">Код<i class="fas fa-angle-double-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -383,7 +401,7 @@
                         <h2>Портфолио VR-web</h2>
 
                         <div class="portfolio__modal-content">
-                            <div class="portfolio__modal-description">Адаптивность, кроссбраузерность, flex,
+                            <div class="portfolio__modal-description">Адаптивность, flex,
                                 препроцессор
                                 SCSS, БЭМ, js, jquery, pagepiling.js, gulp.</div>
                             <div class="portfolio__modal-link portfolio__card-content-link">
@@ -412,10 +430,10 @@
                         <input type="hidden" name="form_subject" value="Form Subject">
                         <!-- END Hidden Required Fields -->
                         <div class="input-union">
-                            <input name="Имя" type="text" placeholder="Имя">
-                            <input name="Email" type="text" placeholder="Email"></div>
-                        <input name="Тема" type="text" placeholder="Тема">
-                        <textarea name="Сообщение" placeholder="Сообщение"></textarea>
+                            <input name="Имя" type="text" placeholder="Имя" required>
+                            <input name="Email" type="email" placeholder="Email" required></div>
+                        <input name="Тема" type="text" placeholder="Тема" required>
+                        <textarea name="Сообщение" placeholder="Сообщение" required></textarea>
                         <button type="submit">Отправить</button>
                     </form>
                 </div>
@@ -435,6 +453,7 @@
             </div>
         </section>
     </main>
+    <script src="js/section-scroll.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
 </body>

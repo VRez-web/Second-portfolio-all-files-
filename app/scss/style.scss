@@ -357,7 +357,6 @@
 .skills {
   &__title {
     color: $color-tematicWord;
-    margin: 30px 0;
     font-size: 40px;
   }
 
@@ -372,6 +371,7 @@
     display: flex;
     width: 95%;
     flex-wrap: wrap;
+    height: 85%;
 
     &-coding {
       display: flex;
@@ -387,6 +387,12 @@
       display: flex;
       margin-bottom: 30px;
       align-items: center;
+      padding: 10px;
+      transition: all .3s linear;
+      border-radius: 15px;
+      &:hover{
+        box-shadow: 15px 13px 50px 27px rgba(0, 0, 0, 0.46);
+      }
 
       svg {
         position: relative;
@@ -735,6 +741,10 @@
 
         &:focus {
           border-bottom: 1px solid $color-btn;
+        }
+
+        &:invalid{
+          border-bottom: 1px solid red;
         }
       }
 
