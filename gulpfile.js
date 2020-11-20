@@ -89,7 +89,9 @@ gulp.task('export',async function () {
         .pipe(gulp.dest('dist/fonts'))
 
     let BuildImg = gulp.src('app/img/**/*.*')
+        .pipe(imagemin())
         .pipe(gulp.dest('dist/img'))
+      
 });
 gulp.task('js', function () {
     return gulp.src([
@@ -107,7 +109,6 @@ gulp.task('js', function () {
 gulp.task('img',async function () {
   return  gulp.src('app/img/**')
        .pipe(imagemin())
-       
 });
 gulp.task('build', gulp.series('clean', 'export'));
 

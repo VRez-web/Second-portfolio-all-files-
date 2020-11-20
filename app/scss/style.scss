@@ -388,9 +388,9 @@
       margin-bottom: 30px;
       align-items: center;
       padding: 10px;
-      transition: all .3s linear;
+      transition: all 0.3s linear;
       border-radius: 15px;
-      &:hover{
+      &:hover {
         box-shadow: 15px 13px 50px 27px rgba(0, 0, 0, 0.46);
       }
 
@@ -739,12 +739,18 @@
         color: #fff;
         border-radius: 5px;
 
+        &:default {
+          border-bottom: 0;
+        }
         &:focus {
           border-bottom: 1px solid $color-btn;
         }
 
-        &:invalid{
+        &:invalid:not(:placeholder-shown) {
           border-bottom: 1px solid red;
+        }
+        &:valid:not(:placeholder-shown) {
+          border-bottom: 1px solid $color-btn;
         }
       }
 
